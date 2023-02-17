@@ -1,19 +1,21 @@
-import React from 'react'; 
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
+import Service from './components/pages/Service';
 
 function App() {
   return (
     <>
-      <Router> 
+      <Router>
         <Navbar />
-       
-        <Route path='/' exact component={Home}></Route>
-      
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/services' element={<Service />}></Route>
+        </Routes>
       </Router>
-      
+
     </>
   );
 }
