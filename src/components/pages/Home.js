@@ -6,6 +6,7 @@ function Home() {
     return (
         <>
             <HeroSection />
+            <h1>This is home</h1>
         </>
     )
 }
